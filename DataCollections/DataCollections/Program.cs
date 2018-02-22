@@ -66,7 +66,6 @@ namespace DataCollections
 
             var data4 = (from element in cars
                          where element.Model.Count() > 4
-                         
                          select element.Model);
 
             foreach (var i in data4)
@@ -81,7 +80,7 @@ namespace DataCollections
                          orderby element.KW descending
                          select element).ElementAt(0);
 
-            Console.WriteLine(data5.Producer + ", " + data5.Model);
+            Console.WriteLine(data5.Producer + ", " + data5.Model + " (KW: " + data5.KW + ")");
 
             var data6 = (from element in cars
                          orderby element.KW ascending
@@ -89,7 +88,7 @@ namespace DataCollections
 
             Console.WriteLine();
             Console.WriteLine("Least powerful:");
-            Console.WriteLine(data6.Producer + ", " + data6.Model);
+            Console.WriteLine(data6.Producer + ", " + data6.Model + " (KW: " + data6.KW + ")");
 
             Console.ReadLine();
         }
