@@ -249,17 +249,17 @@ namespace DataCollections
 
             var data5 = (from element in cars
                          orderby element.KW descending
-                         select element);
+                         select element).ElementAt(0);
 
-            Console.WriteLine(data5.ElementAt(0).Producer + ", " + data5.ElementAt(0).Model);
+            Console.WriteLine(data5.Producer + ", " + data5.Model);
 
             var data6 = (from element in cars
                          orderby element.KW ascending
-                         select element);
+                         select element).ElementAt(0);
 
             Console.WriteLine();
             Console.WriteLine("Least powerful:");
-            Console.WriteLine(data6.ElementAt(0).Producer + ", " + data6.ElementAt(0).Model);
+            Console.WriteLine(data6.Producer + ", " + data6.Model);
 
             Console.ReadLine();
         }
